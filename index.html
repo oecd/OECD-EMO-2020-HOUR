@@ -60,7 +60,7 @@
         .style("opacity", 0); 
     var color = ["#32A674", "#993484", "#E73741", "#E1B400","#993484",  "#DF521E", "#719E24"];
 
-    var margin = { top: 70, right: 50, bottom: 30, left: 40 };
+    var margin = { top: 70, right: 70, bottom: 30, left: 40 };
 
     var mapRatio = 12 / 20;
     var width,lagText,height;
@@ -172,7 +172,7 @@
             .call(d3.axisTop(x).ticks(4).tickFormat(function (x) {
                 
                 if (x =="1" ) {
-                    return "1st month";
+                    return "1st month after crisis start";
                 } else if (x == "2" ) {
                     return  "2nd month";
                 } else if (x =="3") {
@@ -229,7 +229,7 @@
                 .attr("y", function (d) { return height -25})
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("This is the change in working hours in the 3 first months")
+                .text("This is the drop in working hours in the 3 first months")
                 .transition().delay(3000).duration(200).remove()
             
             scenarioSVG.append("text")
@@ -237,7 +237,7 @@
                 .attr("y", function (d) { return height })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("of the global financial crisis")
+                .text("following the global financial crisis")
                 .transition().delay(3000).duration(200).remove()
 
         }
@@ -270,7 +270,7 @@
                 .attr("y", function (d) { return height - 30 })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("and the change in woking hours losts to covid ")
+                .text("and the change in working hours losts to covid ")
                 .transition().delay(3000).duration(200).remove()
                 
             scenarioSVG.append("text")
@@ -278,7 +278,7 @@
                 .attr("y", function (d) { return height })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("in the countries' 3 first months of the crisis")
+                .text("in the countries'first 3 months of the crisis")
                 .transition().delay(3000).duration(200).remove()
         }
 
