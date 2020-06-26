@@ -131,8 +131,9 @@
 
     function updateChart() {
         document.getElementById("Play").style.display = "none";
+
+        d3.selectAll('*').interrupt();
         scenarioSVG.selectAll("*").remove()
-        d3.selectAll('*').transition();
 
 
         if (document.getElementById("scenario").offsetWidth - margin.left - margin.right > 1140 - margin.right - margin.left)
