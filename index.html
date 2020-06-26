@@ -206,7 +206,7 @@
             scenarioSVG
                 .append("path")
                 .attr("fill", "none"/*"#8DCD79"*/)
-                .attr("stroke", function (d) { return "#993484" })
+                .attr("stroke", function (d) { return "#0b0064" })
                 .attr("stroke-width", "5px")
                 // .attr("opacity", function () { if (k == 0) return 0.1; else return 1; })
                 .attr("class", "lineContext")
@@ -248,7 +248,7 @@
         scenarioSVG
             .append("path")
             .attr("fill", "none")
-            .attr("stroke", function (d) { return "#E73741" })
+            .attr("stroke", function (d) { return "#00b5cb" })
             .attr("stroke-width", "5px")
             .attr("opacity",1)
             .attr("d", function (d) {
@@ -287,9 +287,9 @@
 
             scenarioSVG
                 .append("path")
-                .attr("fill", "#E73741")
-                .attr("stroke", function (d) { return "#E73741" })
-                .attr("stroke-width", "none")
+                .attr("fill", "#0090ff")
+                .attr("stroke", function (d) { return "#0090ff" })
+                .attr("stroke-width", "0px")
                 .attr("opacity", 0.1)
                 .attr("d", function (d) {
                     return d3.area()//area
@@ -310,7 +310,7 @@
                     },
                     x: x("2"),
                     y: y(annotationMark[0].financialCrisis),
-                    dy: 25,
+                    dy: -5,
                     dx: 25
                 }
             ]
@@ -322,8 +322,8 @@
                     },
                     x: x(("2")),
                     y: y(annotationMark[0].covid),
-                    dy: -30,
-                    dx: 30
+                    dy: 5,
+                    dx: -30
                 }
             ]
             
