@@ -31,6 +31,7 @@
     <img id="Share" src="img/share.svg" alt="share">
     <div id="scenario" alt=""></div>
     <div id="source" class="source">Source: <a class="source" href="https://doi.org/10.1787/1686c758-en" target="_blank">OECD (2020), OECD Employment Outlook 2020: Worker Security and the COVID-19 Crisis, OECD Publishing, Paris.</a></div>
+    <div id="note" class="source">Note: Average of selected countries: Australia, Canada, Japan, Korea, Sweden, USA.</div>
     <div id="shareLink">
         <div id="shutterholdertracker">
             <img id="shuttershare" src="img/cross.svg">
@@ -195,7 +196,7 @@
 
         scenarioSVG.append("text")
             .attr("x", function (d) { return x("0.05") + lagText })
-            .attr("y", function (d) { return height - 30 })
+            .attr("y", function (d) { return height - 45 })
             .attr("class", "explanatory")
             .text("Crisis can affect strongly the number of working hours in societies")
             .transition().delay(3000).remove()
@@ -206,8 +207,8 @@
             scenarioSVG
                 .append("path")
                 .attr("fill", "none"/*"#8DCD79"*/)
-                .attr("stroke", function (d) { return "#0b0064" })
-                .attr("stroke-width", "5px")
+                .attr("stroke", function (d) { return "#00b5cb" })
+                .attr("stroke-width", "6px")
                 // .attr("opacity", function () { if (k == 0) return 0.1; else return 1; })
                 .attr("class", "lineContext")
                 //.attr("id", function (d) { return "doubleHit" + i; })
@@ -226,7 +227,7 @@
 
             scenarioSVG.append("text")
                 .attr("x", function (d) { return x("0.05") + lagText })
-                .attr("y", function (d) { return height -25})
+                .attr("y", function (d) { return height -45})
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
                 .text("This is the drop in working hours in the 3 first months")
@@ -248,8 +249,8 @@
         scenarioSVG
             .append("path")
             .attr("fill", "none")
-            .attr("stroke", function (d) { return "#00b5cb" })
-            .attr("stroke-width", "5px")
+            .attr("stroke", function (d) { return "#E73741" })
+            .attr("stroke-width", "6px")
             .attr("opacity",1)
             .attr("d", function (d) {
                 return d3.line()//area
@@ -267,7 +268,7 @@
 
             scenarioSVG.append("text")
                 .attr("x", function (d) { return x("0.05") + lagText })
-                .attr("y", function (d) { return height - 30 })
+                .attr("y", function (d) { return height - 45 })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
                 .text("and the change in working hours losts to covid ")
@@ -306,23 +307,23 @@
             const finance = [
                 {
                     note: {
-                        label: "financial crisis"
+                        label: "Global Financial Crisis"
                     },
                     x: x("2"),
                     y: y(annotationMark[0].financialCrisis),
-                    dy: -5,
-                    dx: 25
+                    dy: 10,
+                    dx: -25
                 }
             ]
             const covid = [
                 {
                     note: {
-                        label: "Covid crisis"
+                        label: "COVID-19 crisis"
                         
                     },
                     x: x(("2")),
                     y: y(annotationMark[0].covid),
-                    dy: 5,
+                    dy: 10,
                     dx: -30
                 }
             ]

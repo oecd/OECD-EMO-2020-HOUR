@@ -677,7 +677,7 @@ width:175px;
 
 
 
-#source{ 
+#source,#note{ 
   margin-left: 2%;
 }
 
@@ -1084,14 +1084,14 @@ div.tooltip {
 
 .explanatory{
    font-family: 'Oswald', sans-serif;
-      font-size: 2.75rem;
+      font-size: 3.2rem;
       font-weight: 600;
       fill: rgb(97, 97, 97);
 }
 
 .annotation-note-label{
    font-family: 'Oswald', sans-serif;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 400;
       fill: rgb(97, 97, 97);
 }
@@ -1100,7 +1100,7 @@ div.tooltip {
 @media only screen and (max-width: 975px) {
 
 .explanatory{
-      font-size: 2rem;
+      font-size: 2.25rem;
 
 }
 }
@@ -1108,7 +1108,7 @@ div.tooltip {
 @media only screen and (max-width: 850px) {
 
 .explanatory{
-      font-size: 1.5rem;
+      font-size: 1.75rem;
 
 }
 }
@@ -1126,12 +1126,12 @@ div.tooltip {
   }
 
 .explanatory{
-      font-size: 1.25rem;
+      font-size: 1.5rem;
 
 }
 
 .annotation-note-label{
-      font-size: 1rem;
+      font-size: 1.5rem;
 }
 
 .tick{
@@ -1149,7 +1149,7 @@ div.tooltip {
 @media only screen and (max-width: 500px) {
 
 .explanatory{
-      font-size: 0.85rem;
+      font-size: 1.25rem;
 
 }
   
