@@ -25,8 +25,7 @@
     </head>
 
     <body>
-    <h1>The worst labour market crisis in a century</h1>
-    <h2>Collapse in the number of hours people work</h2>
+    <h1>Collapse in the number of hours people work</h1>
     <img id="Play" src="img/triangle-right.svg" alt="Play button">
     <img id="Share" src="img/share.svg" alt="share">
     <div id="scenario" alt=""></div>
@@ -123,7 +122,7 @@
 
     function render(err, scenarioData) {
         allScenario = scenarioData;
-        annotationMark= scenarioData.filter(function (d) { return d.TIME == "2"; });
+        annotationMark= scenarioData.filter(function (d) { return d.TIME == "1"; });
 
         updateChart();
 
@@ -279,7 +278,7 @@
                 .attr("y", function (d) { return height })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("During the first 3 months of the Covid crisis")
+                .text("during the first 3 months of the Covid crisis")
                 .transition().delay(3000).duration(200).remove()
         }
 
@@ -309,10 +308,10 @@
                     note: {
                         label: "Global financial crisis, 2007-08"
                     },
-                    x: x("2"),
+                    x: x("1"),
                     y: y(annotationMark[0].financialCrisis),
-                    dy: 10,
-                    dx: -25
+                    dy: 20,
+                    dx: 30
                 }
             ]
             const covid = [
@@ -321,9 +320,9 @@
                         label: "COVID-19 crisis"
                         
                     },
-                    x: x(("2")),
+                    x: x(("1")),
                     y: y(annotationMark[0].covid),
-                    dy: -10,
+                    dy: -0,
                     dx: -60
                 }
             ]

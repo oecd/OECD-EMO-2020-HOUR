@@ -434,7 +434,7 @@ width:87.5%;
 .legendtext{
   font-family: 'Oswald', sans-serif;
     font-style: normal;
-    font-size: 1.0rem;
+    font-size: 1.5rem;
     font-weight:600;
 }
 
@@ -1140,7 +1140,7 @@ div.tooltip {
 }
 
 .connector,.note-line{
-  stroke-width: 2px;
+  stroke-width: 1px;
 }
 
 
