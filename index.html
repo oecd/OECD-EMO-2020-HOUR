@@ -173,7 +173,7 @@
             .call(d3.axisTop(x).ticks(4).tickFormat(function (x) {
                 
                 if (x =="1" ) {
-                    return "1st month after crisis start";
+                    return "1st month after the crisis' start";
                 } else if (x == "2" ) {
                     return  "2nd month";
                 } else if (x =="3") {
@@ -198,7 +198,7 @@
             .attr("x", function (d) { return x("0.05") + lagText })
             .attr("y", function (d) { return height - 45 })
             .attr("class", "explanatory")
-            .text("Crisis can affect strongly the number of working hours in societies")
+            .text("During a crisis, jobs are lost, but so are working hours")
             .transition().delay(3000).remove()
             .on("end", drawfinance)
 
@@ -230,7 +230,7 @@
                 .attr("y", function (d) { return height -45})
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("This is the drop in working hours in the 3 first months")
+                .text("This is the drop in working hours during the 3 first months")
                 .transition().delay(3000).duration(200).remove()
             
             scenarioSVG.append("text")
@@ -279,7 +279,7 @@
                 .attr("y", function (d) { return height })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("in the first 3 months of the Covid crisis")
+                .text("During the first 3 months of the Covid crisis")
                 .transition().delay(3000).duration(200).remove()
         }
 
