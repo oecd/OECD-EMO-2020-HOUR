@@ -193,6 +193,16 @@
             return function (t) { return i(t); };
         }
 
+
+        scenarioSVG.append("rect")
+            .attr("x", function (d) { return x("0") })
+            .attr("y", function (d) { return height - 75 })
+            .attr("height", 85)
+            .attr("width", width)
+            .attr("fill", "#ffffff")
+            .attr("opacity", 0.75)
+            .transition().delay(3000).remove()
+
         scenarioSVG.append("text")
             .attr("x", function (d) { return x("0.05") + lagText })
             .attr("y", function (d) { return height - 45 })
@@ -222,7 +232,17 @@
                 .duration(4000)
                 .attrTween("stroke-dasharray", tweenDash)
                 .on("end", drawCovid)
+           
 
+            scenarioSVG.append("rect")
+                .attr("x", function (d) { return x("0") })
+                .attr("y", function (d) { return height - 75 })
+                .attr("height", 85)
+                .attr("width", width)
+                .attr("fill", "#ffffff")
+                .attr("opacity", 0.75)
+                .transition().delay(500).duration(500)
+                .transition().delay(3000).duration(200).remove()
 
             scenarioSVG.append("text")
                 .attr("x", function (d) { return x("0.05") + lagText })
@@ -264,6 +284,15 @@
                 .on("end", annotate)
             
             
+            scenarioSVG.append("rect")
+                .attr("x", function (d) { return x("0") })
+                .attr("y", function (d) { return height - 75 })
+                .attr("height", 85)
+                .attr("width", width)
+                .attr("fill", "#ffffff")
+                .attr("opacity", 0.75)
+                .transition().delay(500).duration(500)
+                .transition().delay(3000).duration(200).remove()
 
             scenarioSVG.append("text")
                 .attr("x", function (d) { return x("0.05") + lagText })
@@ -278,7 +307,7 @@
                 .attr("y", function (d) { return height })
                 .attr("class", "explanatory")
                 .transition().delay(500).duration(500)
-                .text("during the first 3 months of the Covid crisis")
+                .text("during the first 3 months of the COVID-19 crisis")
                 .transition().delay(3000).duration(200).remove()
         }
 
@@ -342,6 +371,14 @@
                 .call(makeAnnotationcovid)
 
         
+            scenarioSVG.append("rect")
+                .attr("x", function (d) { return x("0") })
+                .attr("y", function (d) { return height - 75 })
+                .attr("height", 85)
+                .attr("width", width)
+                .attr("fill", "#ffffff")
+                .attr("opacity", 0.75)
+                .transition().delay(500).duration(500)
 
             scenarioSVG.append("text")
                 .attr("x", function (d) { return x("0.05") + lagText })
